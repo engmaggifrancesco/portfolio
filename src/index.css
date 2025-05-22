@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Nascondi le barre di scorrimento ma mantieni la funzionalità di scorrimento */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Stile di scorrimento fluido */
+* {
+  scroll-behavior: auto !important;
+}
+
+/* Stili globali per il corpo del documento */
+html, body {
+  overscroll-behavior-x: none;
+  background-color: #000;
+  color: #fff;
+  height: auto !important;
+  min-height: 100% !important;
+  overflow: visible !important;
+  overflow-y: auto !important;
+  scroll-behavior: auto;
+  position: relative;
+}
+
+/* Nascondere la barra di scorrimento mantenendo la funzionalità */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Layout principale */
+.main-layout {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
